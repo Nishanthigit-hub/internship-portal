@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | Internship Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-container">
+
+    <div class="form-card">
+
+        <!-- BLUE CARD HEADER -->
+        <div class="card-header">
+            <div class="brand-icon">🎓</div>
+            <h1>Internship Registration</h1>
+            <p>Create your student account</p>
+        </div>
+
+        <!-- STEP INDICATORS -->
+        <div class="step-indicators">
+            <div class="step-dot active"></div>
+            <div class="step-dot"></div>
+            <div class="step-dot"></div>
+        </div>
+
+        <form id="registerForm">
+
+            <!-- STEP 1 -->
+            <div class="step-panel active">
+
+                <div class="section-heading">
+                    <span>👤</span>
+                    <h2>Personal & Account Details</h2>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName"
+                               placeholder="Enter full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <div class="input-icon-field">
+                            <span>📧</span>
+                            <input type="email" id="email"
+                                   placeholder="example@gmail.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-icon-field">
+                            <span>🔒</span>
+                            <input type="password" id="password"
+                                   placeholder="Password" minlength="8" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <div class="input-icon-field">
+                            <span>🔐</span>
+                            <input type="password" id="confirmPassword"
+                                   placeholder="Confirm password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <div class="mobile-input">
+                            <span>🇮🇳 +91</span>
+                            <input type="tel" id="mobile"
+                                   placeholder="10-digit number"
+                                   pattern="[0-9]{10}"
+                                   maxlength="10" required>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="step-panel">
+
+                <div class="section-heading">
+                    <span>🏫</span>
+                    <h2>College & Academic Details</h2>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+                        <label>College Name</label>
+
+                        <select id="college" required>
+                            <option value="">Select College</option>
+                            <option value="E.G.S. Pillay Engineering College">
+                                E.G.S. Pillay Engineering College
+                            </option>
+                            <option value="__add_new__">+ Add New College</option>
+                        </select>
+
+                        <input type="text" id="newCollege"
+                               class="conditional-input"
+                               placeholder="Enter new college name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Register Number</label>
+                        <input type="text" id="registerNumber"
+                               placeholder="Register number"
+                               maxlength="15" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Degree</label>
+                        <select id="degree" required>
+                            <option value="">Select Degree</option>
+                            <option>B.E</option>
+                            <option>B.Tech</option>
+                            <option>B.Sc</option>
+                            <option>BCA</option>
+                            <option>M.E</option>
+                            <option>M.Tech</option>
+                            <option>MCA</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Department</label>
+
+                        <select id="department" required>
+                            <option value="">Select Department</option>
+                            <option>Computer Science Engineering</option>
+                            <option>Information Technology</option>
+                            <option>Electronics and Communication Engineering</option>
+                            <option>Mechanical Engineering</option>
+                            <option>Civil Engineering</option>
+                            <option>Artificial Intelligence and Data Science</option>
+                            <option value="__add_new__">+ Add New Department</option>
+                        </select>
+
+                        <input type="text" id="newDepartment"
+                               class="conditional-input"
+                               placeholder="Enter new department">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Year</label>
+                        <select id="year" required>
+                            <option value="">Select Year</option>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Semester</label>
+                        <select id="semester" required>
+                            <option value="">Select Semester</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="step-panel">
+
+                <div class="section-heading">
+                    <span>💼</span>
+                    <h2>Internship Details</h2>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Domain</label>
+                        <select id="domain" required>
+                            <option value="">Select Domain</option>
+                            <option>Full Stack Development</option>
+                            <option>Python Development</option>
+                            <option>Web Development</option>
+                            <option>Data Science</option>
+                            <option>Artificial Intelligence</option>
+                            <option>UI/UX Design</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Duration</label>
+                        <select id="duration" required>
+                            <option value="">Select Duration</option>
+                            <option>15 Days</option>
+                            <option>30 Days</option>
+                            <option>45 Days</option>
+                            <option>60 Days</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <input type="text" id="customDuration"
+                               class="conditional-input"
+                               placeholder="Enter duration">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Start Date</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>End Date</label>
+                        <input type="date" id="endDate" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Mode</label>
+                        <select id="mode" required>
+                            <option value="">Select Mode</option>
+                            <option>Online</option>
+                            <option>Offline</option>
+                            <option>Hybrid</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">
+                        I agree to the terms and conditions.
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- NAVIGATION BUTTONS -->
+            <div class="stepper-nav">
+
+                <button type="button" id="prevBtn" class="nav-btn">
+                    ← Previous
+                </button>
+
+                <button type="button" id="nextBtn" class="nav-btn">
+                    Next →
+                </button>
+
+                <button type="submit" id="submitBtn" class="nav-btn">
+                    Create Account
+                </button>
+
+            </div>
+
+            <p class="bottom-text">
+                Already have an account?
+                <a href="login.html">Login here</a>
+            </p>
+
+        </form>
+    </div>
+
+</div>
+
+<script>
+const panels = document.querySelectorAll(".step-panel");
+const dots = document.querySelectorAll(".step-dot");
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const submitBtn = document.getElementById("submitBtn");
+const form = document.getElementById("registerForm");
+
+let currentStep = 0;
+
+// Add new college and department
+function setupAddNew(selectId, inputId) {
+    const select = document.getElementById(selectId);
+    const input = document.getElementById(inputId);
+
+    select.addEventListener("change", function() {
+        input.style.display =
+            this.value === "__add_new__" ? "block" : "none";
+
+        input.required = this.value === "__add_new__";
+
+        if (input.required) input.focus();
+        else input.value = "";
+    });
+
+    return function() {
+        const value = input.value.trim();
+
+        if (!value) {
+            alert("Please enter a name.");
+            input.focus();
+            return false;
+        }
+
+        const exists = Array.from(select.options).some(option =>
+            option.value.toLowerCase() === value.toLowerCase()
+        );
+
+        if (exists) {
+            alert("This name already exists.");
+            input.focus();
+            return false;
+        }
+
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = value;
+
+        select.insertBefore(
+            option,
+            select.querySelector('option[value="__add_new__"]')
+        );
+
+        select.value = value;
+        input.value = "";
+        input.style.display = "none";
+        input.required = false;
+
+        return true;
+    };
+}
+
+const addCollege = setupAddNew("college", "newCollege");
+const addDepartment = setupAddNew("department", "newDepartment");
+
+// Semester selection
+const year = document.getElementById("year");
+const semester = document.getElementById("semester");
+
+year.addEventListener("change", function() {
+    semester.innerHTML =
+        '<option value="">Select Semester</option>';
+
+    const map = {
+        "1": [1, 2],
+        "2": [3, 4],
+        "3": [5, 6],
+        "4": [7, 8]
+    };
+
+    (map[this.value] || []).forEach(number => {
+        const option = document.createElement("option");
+        option.value = number;
+        option.textContent = "Semester " + number;
+        semester.appendChild(option);
+    });
+});
+
+// Custom duration
+const duration = document.getElementById("duration");
+const customDuration = document.getElementById("customDuration");
+
+duration.addEventListener("change", function() {
+    const isOther = this.value === "Other";
+
+    customDuration.style.display = isOther ? "block" : "none";
+    customDuration.required = isOther;
+
+    if (!isOther) customDuration.value = "";
+});
+
+// Date validation
+const startDate = document.getElementById("startDate");
+const endDate = document.getElementById("endDate");
+
+startDate.addEventListener("change", function() {
+    endDate.min = this.value;
+
+    if (endDate.value && endDate.value < this.value) {
+        endDate.value = "";
+    }
+});
+
+// Update stepper
+function updateUI() {
+    panels.forEach((panel, index) => {
+        panel.classList.toggle("active", index === currentStep);
+    });
+
+    dots.forEach((dot, index) => {
+        dot.classList.remove("active", "completed");
+
+        if (index < currentStep) dot.classList.add("completed");
+        if (index === currentStep) dot.classList.add("active");
+    });
+
+    prevBtn.style.display = currentStep === 0 ? "none" : "block";
+    nextBtn.style.display =
+        currentStep === panels.length - 1 ? "none" : "block";
+    submitBtn.style.display =
+        currentStep === panels.length - 1 ? "block" : "none";
+}
+
+// Validate current step
+function validateStep() {
+    if (currentStep === 1) {
+        const college = document.getElementById("college");
+        const department = document.getElementById("department");
+
+        if (college.value === "__add_new__" && !addCollege()) return false;
+        if (department.value === "__add_new__" && !addDepartment()) return false;
+    }
+
+    for (const input of panels[currentStep].querySelectorAll("input, select")) {
+        if (!input.checkValidity()) {
+            input.reportValidity();
+            return false;
+        }
+    }
+
+    if (currentStep === 0) {
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return false;
+        }
+    }
+
+    if (currentStep === 2 && endDate.value <= startDate.value) {
+        alert("End date must be after the start date.");
+        return false;
+    }
+
+    return true;
+}
+
+// Next
+nextBtn.addEventListener("click", function() {
+    if (validateStep()) {
+        currentStep++;
+        updateUI();
+    }
+});
+
+// Previous
+prevBtn.addEventListener("click", function() {
+    if (currentStep > 0) {
+        currentStep--;
+        updateUI();
+    }
+});
+
+// Submit
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (!validateStep()) return;
+
+    alert(
+        "Registration completed successfully!\nWelcome " +
+        document.getElementById("fullName").value
+    );
+
+    form.reset();
+    currentStep = 0;
+
+    document.querySelectorAll(".conditional-input").forEach(input => {
+        input.style.display = "none";
+        input.required = false;
+    });
+
+    semester.innerHTML =
+        '<option value="">Select Semester</option>';
+
+    endDate.min = "";
+
+    updateUI();
+});
+
+updateUI();
+</script>
+
+</body>
+</html>

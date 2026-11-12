@@ -1,0 +1,538 @@
+
+/* =====================================
+   COMMON STYLES
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================
+   REGISTRATION PAGE
+===================================== */
+
+.page-container {
+    min-height: 100vh;
+    padding: 45px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 850px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e8ef;
+    box-shadow: 0 5px 25px rgba(15, 35, 65, 0.10);
+}
+
+
+/* =====================================
+   BLUE CARD HEADER - BOTH PAGES
+===================================== */
+
+.card-header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #2875bd, #153f73);
+    color: white;
+}
+
+.card-header .brand-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.card-header h1 {
+    color: white;
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.card-header p {
+    color: #e1edfa;
+    font-size: 14px;
+}
+
+
+/* =====================================
+   REGISTRATION FORM CONTENT
+===================================== */
+
+#registerForm {
+    padding: 30px 40px 35px;
+}
+
+.step-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 25px;
+}
+
+.step-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #d7dce5;
+    transition: 0.3s;
+}
+
+.step-dot.active {
+    width: 28px;
+    border-radius: 8px;
+    background: #2875bd;
+}
+
+.step-dot.completed {
+    background: #15803d;
+}
+
+.step-panel {
+    display: none;
+    animation: slideIn 0.4s ease;
+}
+
+.step-panel.active {
+    display: block;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e6eaf0;
+}
+
+.section-heading span {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf4ff;
+    border-radius: 7px;
+}
+
+.section-heading h2 {
+    color: #102a50;
+    font-size: 18px;
+}
+
+
+/* =====================================
+   FORM GRID
+===================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 22px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    color: #26364d;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 45px;
+    padding: 10px 13px;
+    border: 1px solid #d7dce5;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2875bd;
+    box-shadow: 0 0 0 3px rgba(40, 117, 189, 0.15);
+}
+
+
+/* =====================================
+   INPUT ICONS
+===================================== */
+
+.input-icon-field,
+.mobile-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #d7dce5;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.input-icon-field span,
+.mobile-input span {
+    padding: 0 12px;
+    white-space: nowrap;
+    background: #f4f7fc;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon-field input,
+.mobile-input input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    height: 100%;
+    box-shadow: none;
+}
+
+.input-icon-field input:focus,
+.mobile-input input:focus {
+    box-shadow: none;
+}
+
+.conditional-input {
+    display: none;
+    margin-top: 10px;
+}
+
+
+/* =====================================
+   TERMS AND CONDITIONS
+===================================== */
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.terms input {
+    accent-color: #2875bd;
+    width: 16px;
+    height: 16px;
+}
+
+
+/* =====================================
+   STEPPER BUTTONS - UPDATED
+===================================== */
+
+.stepper-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e6eaf0;
+}
+
+.nav-btn,
+.submit-btn {
+    height: 46px;
+    padding: 0 22px;
+    background: linear-gradient(135deg, #2875bd, #174b88);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover,
+.submit-btn:hover {
+    background: linear-gradient(135deg, #174b88, #10345f);
+    transform: translateY(-2px);
+}
+
+/* Previous button on left */
+#prevBtn {
+    margin-right: auto;
+}
+
+/* Next button on right */
+#nextBtn {
+    margin-left: auto;
+}
+
+/* Create Account button on right */
+#submitBtn {
+    margin-left: auto;
+}
+
+/* Initial visibility */
+#prevBtn,
+#submitBtn {
+    display: none;
+}
+
+
+/* =====================================
+   LOGIN PAGE
+===================================== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e8ef;
+    box-shadow: 0 5px 25px rgba(15, 35, 65, 0.10);
+}
+
+.login-card form {
+    padding: 30px 35px 35px;
+}
+
+.login-card .form-group {
+    margin-bottom: 20px;
+}
+
+.login-options {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 22px;
+    font-size: 14px;
+}
+
+.login-options a {
+    color: #2875bd;
+    font-weight: 600;
+}
+
+.login-options a:hover {
+    color: #10345f;
+    text-decoration: underline;
+}
+
+.login-card .submit-btn {
+    width: 100%;
+    height: 47px;
+    font-size: 15px;
+}
+
+
+/* =====================================
+   BOTTOM TEXT
+===================================== */
+
+.bottom-text {
+    text-align: center;
+    color: #737d8c;
+    font-size: 14px;
+    margin-top: 22px;
+}
+
+.bottom-text a {
+    color: #2875bd;
+    font-weight: 600;
+}
+
+.bottom-text a:hover {
+    color: #10345f;
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 650px) {
+
+    .page-container {
+        padding: 20px 12px;
+    }
+
+    #registerForm {
+        padding: 20px 18px 25px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .card-header {
+        padding: 25px 15px;
+    }
+
+    .card-header h1 {
+        font-size: 23px;
+    }
+
+    .section-heading h2 {
+        font-size: 16px;
+    }
+
+    .stepper-nav {
+        gap: 8px;
+    }
+
+    .nav-btn {
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+    .login-page {
+        padding: 20px 12px;
+    }
+
+    .login-card form {
+        padding: 25px 20px;
+    }
+
+}
+
+/* =====================================
+   LOGIN PAGE
+===================================== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 380px; /* Balanced size (between 320px and 450px) */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e8ef;
+    box-shadow: 0 5px 25px rgba(15, 35, 65, 0.10);
+}
+
+/* Slightly larger header padding and fonts */
+.login-card .brand.card-header {
+    background-color: #2875bd;
+    color: #ffffff;
+    text-align: center;
+    padding: 28px 20px 20px; 
+}
+
+.login-card .brand.card-header .brand-icon {
+    font-size: 32px; 
+    margin-bottom: 8px;
+}
+
+.login-card .brand.card-header h1 {
+    color: #ffffff;
+    margin: 0 0 5px;
+    font-size: 23px; 
+}
+
+.login-card .brand.card-header p {
+    color: #e2e8f0;
+    margin: 0;
+    font-size: 13px; 
+}
+
+.login-card form {
+    padding: 25px 28px 28px; /* Comfortable inner spacing */
+}
+
+.login-card .section-heading {
+    margin-top: 0;
+}
+
+.login-options {
+    display: flex;
+    justify-content: flex-end;
+    margin: 9px 0 19px;
+    font-size: 13.5px;
+}
+
+.login-options a {
+    color: #2875bd;
+    font-weight: 600;
+}
+
+.login-options a:hover {
+    color: #10345f;
+    text-decoration: underline;
+}
+
+.login-card .submit-btn {
+    width: 100%;
+    height: 44px; /* Balanced button height */
+    font-size: 14.5px;
+}
+
+@media (max-width: 500px) {
+    .login-card form {
+        padding: 20px 18px;
+    }
+}
